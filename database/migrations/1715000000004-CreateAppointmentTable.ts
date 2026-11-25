@@ -8,8 +8,9 @@ export class CreateAppointmentTable1715000000003 implements MigrationInterface {
         columns: [
           { name: 'id', type: 'int', isPrimary: true, isGenerated: true, generationStrategy: 'increment' },
           { name: 'doctor_id', type: 'int' },
-          { name: 'client_id', type: 'int' }, // Это теперь ссылка на таблицу user
+          { name: 'client_id', type: 'int' }, // Ссылка на таблицу user
           { name: 'visit_at', type: 'timestamp' },
+          { name: 'status', type: 'varchar', length: '50', default: "'booked'" }, // <--- ДОБАВЛЕНО
         ],
       }),
       true,

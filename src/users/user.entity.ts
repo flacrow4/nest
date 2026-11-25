@@ -7,9 +7,7 @@ export class User {
   @Column() firstname: string;
   @Column() lastname: string;
   @Column() age: number;
-  @Column({ length: 12 }) policy: string;
-  @Column({ unique: true }) email: string;
-  @Column() password: string;
+  @Column({ length: 12 }) policy: string; // Полис
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' }) created_at: Date;
 
   @OneToMany(() => Appointment, (appointment) => appointment.patient)

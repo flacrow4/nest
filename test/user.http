@@ -1,17 +1,15 @@
 @host = http://localhost:3000
 
 ### C - Create (Создать пользователя)
-# user_id и id не передаем, база данных создаст их сама.
+# id не передаем, база данных создаст его сама.
 POST {{host}}/users
 Content-Type: application/json
 
 {
-  "email": "testuser@example.com",
-  "password": "securepassword123",
-  "firstname": "Антон",
-  "lastname": "Антонов",
-  "policy": "220088996677",
-  "age": 35
+  "firstname": "Дима",
+  "lastname": "Димов",
+  "policy": "224388996677",
+  "age": 34
 }
 
 ### L - List (Получить всех)

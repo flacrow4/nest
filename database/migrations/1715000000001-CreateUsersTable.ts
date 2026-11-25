@@ -11,9 +11,6 @@ export class CreateUserTable1715000000000 implements MigrationInterface {
           { name: 'lastname', type: 'varchar', length: '255' },
           { name: 'age', type: 'int' },
           { name: 'policy', type: 'varchar', length: '12' }, // Полис
-          // Поля для авторизации
-          { name: 'email', type: 'varchar', length: '255', isUnique: true },
-          { name: 'password', type: 'varchar', length: '255' },
           { name: 'created_at', type: 'timestamp', default: 'CURRENT_TIMESTAMP' },
         ],
       }),
