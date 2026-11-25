@@ -1,0 +1,31 @@
+@host = http://localhost:3000
+
+### C - Create (Создать пользователя)
+POST {{host}}/users
+Content-Type: application/json
+
+{
+  "user_id": "testuse2r@example.com",
+  "firstname": "Антон",
+  "lastname": "Антонов",
+  "policy": "220088996677",
+  "age": 35
+}
+
+### L - List (Получить всех)
+GET {{host}}/users
+
+### R - Read (Получить одного)
+GET {{host}}/users/1
+
+### U - Update (Обновить профиль)
+PATCH {{host}}/users/2
+Content-Type: application/json
+
+{
+  "firstname": "Петр",
+  "age": 36
+}
+
+### D - Delete (Удалить)
+DELETE {{host}}/users/2

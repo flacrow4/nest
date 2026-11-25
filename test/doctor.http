@@ -1,0 +1,18 @@
+@host = http://localhost:3000
+
+### C - Create (Создать врача)
+POST {{host}}/doctors
+Content-Type: application/json
+
+{
+  "firstname": "Иван",
+  "lastname": "Иванов",
+  "specialization": "Терапевт",
+  "cabinet": "101"
+}
+
+### L - List (Получить всех врачей)
+GET {{host}}/doctors
+
+### R - Read (Получить врача по ID)
+GET {{host}}/doctors/1

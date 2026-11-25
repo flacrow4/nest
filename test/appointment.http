@@ -1,0 +1,23 @@
+@host = http://localhost:3000
+
+### C - Create (Записать пациента к врачу)
+POST {{host}}/appointments
+Content-Type: application/json
+
+{
+  "doctor_id": 1,
+  "client_id": 1,
+  "visit_at": "2026-12-01T10:00:00.000Z",
+  "status": "booked"
+}
+
+### L - List (Получить все записи)
+GET {{host}}/appointments
+
+### U - Update (Обновить статус записи, например, на "completed")
+PATCH {{host}}/appointments/1
+Content-Type: application/json
+
+{
+  "status": "completed"
+}

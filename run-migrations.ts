@@ -1,5 +1,5 @@
 // Обратите внимание: импорт без фигурных скобок, так как в orm-config.ts стоит export default
-import AppDataSource from './src/database/orm-config';
+import AppDataSource from './database/orm-config';
 
 AppDataSource.initialize()
   .then(async () => {
