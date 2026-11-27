@@ -6,9 +6,9 @@ POST {{host}}/users
 Content-Type: application/json
 
 {
-  "firstname": "Дима",
+  "firstname": "Сергей",
   "lastname": "Димов",
-  "policy": "224388996677",
+  "policy": "224388996667",
   "age": 34
 }
 

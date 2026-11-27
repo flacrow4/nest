@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Patch, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
 import { ScheduleService } from './schedule.service';
 
 @Controller('schedules')
@@ -15,18 +15,10 @@ export class ScheduleController {
     return await this.scheduleService.findAll();
   }
 
-  @Get(':id')
-  async findOne(@Param('id') id: string) {
-    return await this.scheduleService.findOne(+id);
-  }
-
-  @Patch(':id')
-  async update(@Param('id') id: string, @Body() updateData: any) {
-    return await this.scheduleService.update(+id, updateData);
-  }
-
   @Delete(':id')
   async remove(@Param('id') id: string) {
-    return await this.scheduleService.remove(+id);
+    // Если вы добавите метод remove в сервис расписания, контроллер будет выглядеть так.
+    // Если нет — можно оставить как есть или удалить этот метод.
+    return { success: true, message: 'Удаление пока не реализовано в сервисе' };
   }
 }

@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import * as dotenv from 'dotenv';
+
+// Импортируем все ваши модули
 import { UsersModule } from './users/users.module';
 import { DoctorModule } from './doctor/doctor.module';
 import { ScheduleModule } from './schedule/schedule.module';
 import { AppointmentModule } from './appointment/appointment.module';
-import * as dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -17,8 +19,10 @@ dotenv.config();
       username: process.env.DATABASE_USER || 'user',
       password: process.env.DATABASE_PASSWORD || 'password',
       database: process.env.DATABASE_NAME || 'mydb',
+
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: false, // Используем миграции
+
+      synchronize: false,
     }),
     UsersModule,
     DoctorModule,

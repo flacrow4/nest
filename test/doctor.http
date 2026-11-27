@@ -5,10 +5,10 @@ POST {{host}}/doctors
 Content-Type: application/json
 
 {
-  "firstname": "Игорь",
+  "firstname": "Павел",
   "lastname": "Игоревич",
   "specialization": "Психолог",
-  "cabinet": "102"
+  "cabinet": "103"
 }
 
 ### L - List (Получить всех врачей)
@@ -18,4 +18,4 @@ GET {{host}}/doctors
 GET {{host}}/doctors/1
 
 ### D - Delete (Удалить врача)
-DELETE {{host}}/doctors/1
+DELETE {{host}}/doctors/2

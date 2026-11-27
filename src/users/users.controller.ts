@@ -7,36 +7,22 @@ export class UsersController {
 
   @Post()
   async create(@Body() createUserDto: any) {
-    // Вызываем метод сервиса, который уже обернут в try/catch
-    const result = await this.usersService.create(createUserDto);
-    if (!result.success) {
-      return { success: false, error: result.message };
-    }
-    return { success: true, data: result.data };
+    return await this.usersService.create(createUserDto);
   }
 
   @Get()
   async findAll() {
-    // Метод findAll в сервисе теперь возвращает массив напрямую (или обернутый объект, проверьте ваш код)
-    return { success: true, data: await this.usersService.findAll() };
+    return await this.usersService.findAll();
   }
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
-    const user = await this.usersService.findOne(+id);
-    if (!user) {
-      return { success: false, error: 'Пользователь не найден' };
-    }
-    return { success: true, data: user };
+    return await this.usersService.findOne(+id);
   }
 
   @Patch(':id')
   async update(@Param('id') id: string, @Body() updateData: any) {
-    const result = await this.usersService.update(+id, updateData);
-    if (!result.success) {
-      return { success: false, error: result.message };
-    }
-    return { success: true, data: result.data };
+    return await this.usersService.update(+id, updateData);
   }
 
   @Delete(':id')

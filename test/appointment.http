@@ -5,9 +5,9 @@ POST {{host}}/appointments
 Content-Type: application/json
 
 {
-  "doctor_id": 1,
-  "client_id": 1,
-  "visit_at": "2026-12-01T10:00:00.000Z",
+  "doctor_id": 2,
+  "client_id": 2,
+  "visit_at": "2026-11-01T10:00:00.000Z",
   "status": "booked"
 }
 

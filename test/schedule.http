@@ -6,7 +6,7 @@ Content-Type: application/json
 
 {
   "doctor_id": 1,
-  "work_schedule": "2026-12-01T10:00:00.000Z"
+  "work_schedule": "2026-11-01T10:00:00.000Z"
 }
 
 ### L - List (Получить все расписания)
